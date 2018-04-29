@@ -2,12 +2,14 @@
 html {
   font-size: 18px;
   font-family: "Helvetica", sans-serif;
+  line-height: 1.4;
 }
 
 .site-container {
   display: flex;
   flex-direction:column;
   align-items: center;
+  border: 1px dashed red;
 }
 
 /* Header section */
@@ -17,7 +19,6 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
   height: 31rem;
 }
 
@@ -55,22 +56,209 @@ nav>ul>li {
   margin-right: 2rem;
 }
 
+.mobile-navbar {
+  display: none;
+}
+
+.headline {
+  align-self: flex-end;
+  background-color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1.5rem 5rem;
+  line-height: 1.2;
+  margin-top: 10rem;
+  margin-right: 5rem;
+}
+
+
+/* Main Body */
+
+.features,
+.information {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.feature {
+  height: 8rem;
+  margin: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px dashed green;
+}
+
+.feature>img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature.exams {
+  width: 3.5rem;
+  border: 1px dashed red;
+}
+
+.feature.fittings,
+.feature.delivery {
+  width: 5rem;
+  border: 1px dashed red;
+}
+
+.feature>p {
+  text-align: center;
+}
+
+.information>.container {
+  max-width: 35%;
+  margin: 0 2rem;
+}
+
+.paragraph-header {
+  background-color: cadetblue;
+  color: white;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+footer {
+  margin-top: 5rem;
+}
+
+.bottom-banner {
+  background-color: azure;
+  width: 960px;
+  color: black;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 4rem;
+  border: 1px dashed green;
+  border: 1px dashed black;
+}
 
 
 
 /* Media queries & CSS display for smaller screen sizes */
 
 @media only screen and (max-width: 1098px) {
-  .top-banner {
+  .top-banner,
+  .bottom-banner {
     width: 100%;
     margin-top: 0;
   }
 
   .graphic-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     height: 22rem;
+  }
+
+  .headline {
+    font-size: 1.33rem;
+    font-weight: bold;
+    padding: 0.75rem 4rem;
+    line-height: 1.2;
+    margin-top: 5rem;
+    margin-right: 2rem;
   }
 }
 
-@media only screen and (max-width: ) {
+  .footer {
+    width: 100%
+  }
 
+@media only screen and (max-width: 810px) {
+  .desktop-navbar {
+    display: none;
+  }
+
+  .mobile-navbar {
+    display: block;
+  }
+
+  .graphic-header {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 17rem;
+  }
+
+  .headline {
+    width: 100%;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem 0;
+    margin-top: 9rem;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+  .graphic-header {
+
+  }
+}
+
+
+@media only screen and (max-width: 590px) {
+
+  .company-logo-text {
+    display: none;
+  }
+
+  .features,
+  .information {
+    font-size: 0.77rem;
+  }
+
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 3.77rem;
+    margin-bottom: 3.77rem;
+  }
+
+  .feature {
+    margin-top: 1.54rem;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .information>.container {
+    width: 100%;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .paragraph-header {
+    padding-left: 0;
+    margin-bottom: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .bottom-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-logo>img {
+    padding: 0;
+  }
 }
